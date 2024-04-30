@@ -22,4 +22,7 @@ public class Role {
 
 
 
+    public Role(RoleType roleType) {
+        this.roleType = roleType;
+    }
 }

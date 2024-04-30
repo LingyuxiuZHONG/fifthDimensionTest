@@ -30,6 +30,9 @@ public class User {
     private List<Role> roles;
 
 
-    public User(String username, String encode, List<Role> roles) {
+    public User(String username, String password, List<Role> roles) {
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
     }
 }

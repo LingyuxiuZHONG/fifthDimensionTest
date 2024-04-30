@@ -19,10 +19,10 @@ import java.io.IOException;
 public class MyUnauthorizedHandler implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
-        log.error("Unauthorized error",authException);
+        log.warn("Unauthorized error",authException);
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json");
-        response.getWriter().println("认证失败");
+        response.getWriter().println("未认证");
         response.getWriter().flush();
     }
 }

@@ -22,7 +22,7 @@ import java.nio.charset.StandardCharsets;
  */
 @Slf4j
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
-    private final static String AUTH_HEADER = "Authorization";
+    private final static String AUTH_HEADER = "authorization";
     private final static String AUTH_HEADER_TYPE = "Bearer";
 
     @Autowired

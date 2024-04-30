@@ -1,5 +1,6 @@
 package com.example.fifthdimensiontest.security;
 
+import com.example.fifthdimensiontest.entity.Role;
 import com.example.fifthdimensiontest.entity.User;
 import com.example.fifthdimensiontest.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -7,6 +8,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * UserDetailsService 是用于加载用户详细信息的接口
@@ -29,6 +32,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
      */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
         User user = userService.getUserByName(username);
         return new UserDetailsImpl(user);
     }
